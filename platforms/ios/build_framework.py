@@ -266,7 +266,7 @@ class iOSBuilder(Builder):
 
         args = Builder.getCMakeArgs(self, arch, target)
         args = args + [
-                       '-DIOS_ARCH=%s' % arch , '-DOPENCV_ENABLE_NONFREE=ON'
+                       '-DIOS_ARCH=%s' % arch , 'OPENCV_ENABLE_NONFREE=ON'
         ]
         return args
 
