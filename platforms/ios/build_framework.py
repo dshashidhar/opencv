@@ -183,8 +183,8 @@ class Builder:
         cmakecmd = self.getCMakeArgs(arch, target) + \
             (["-DCMAKE_TOOLCHAIN_FILE=%s" % toolchain] if toolchain is not None else [])
         if target.lower().startswith("iphoneos"):
+            cmakecmd.append("-DOPENCV_ENABLE_NONFREE=ON")
             cmakecmd.append("-DENABLE_NEON=ON")
-            cmakecmd.append("OPENCV_ENABLE_NONFREE=ON")
             
         cmakecmd.append(self.opencv)
         cmakecmd.extend(cmakeargs)
