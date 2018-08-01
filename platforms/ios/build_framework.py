@@ -268,6 +268,8 @@ class iOSBuilder(Builder):
         args = args + [
                        '-DIOS_ARCH=%s' % arch , 'OPENCV_ENABLE_NONFREE=ON'
         ]
+        print("final#########")
+        print(*args)
         return args
 
 
