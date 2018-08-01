@@ -186,6 +186,8 @@ class Builder:
             cmakecmd.append("-DENABLE_NEON=ON")
             
         cmakecmd.append(self.opencv)
+        print("arugumengts #####")
+        print(cmakeargs)
         cmakecmd.extend(cmakeargs)
         execute(cmakecmd, cwd = builddir)
 
